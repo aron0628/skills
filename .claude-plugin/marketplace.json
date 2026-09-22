@@ -1,0 +1,22 @@
+{
+  "name": "skills",
+  "owner": {
+    "name": "aron0628",
+    "url": "https://github.com/aron0628"
+  },
+  "metadata": {
+    "description": "Claude Code 개인 스킬 모음. 스킬마다 별개 플러그인이라 필요한 것만 골라 설치한다.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "humanizer",
+      "description": "AI가 쓴 글을 20년차 맥킨지 컨설턴트 문체로 고쳐 쓰거나 처음부터 쓴다. 한국어·영어. 결론 먼저(Minto 피라미드), 반박 가능한 단언, 정량 근거로 재구성하고 AI 특유의 특수문자·상투구·헤지 중첩을 걷어낸다.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/humanizer"
+      ]
+    }
+  ]
+}

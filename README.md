@@ -10,16 +10,34 @@ Claude Code 개인 스킬 모음. 스킬 하나가 `skills/<이름>/` 폴더 하
 
 ## 설치
 
-클론한 뒤 쓰려는 스킬을 `~/.claude/skills/` 에 심볼릭 링크로 건다. 링크로 걸어야
-저장소에서 고친 내용이 바로 반영되고 사본이 어긋나지 않는다.
+Claude Code 에서 두 줄이면 된다. **스킬마다 별개 플러그인이라 필요한 것만 골라 받는다** —
+안 쓰는 스킬이 딸려 오지 않는다.
+
+```
+/plugin marketplace add aron0628/skills
+/plugin install humanizer@skills
+```
+
+첫 줄은 한 번만 하면 된다. 다른 스킬을 더 쓰고 싶으면 두 번째 줄만 그 이름으로 반복한다.
+설치한 스킬은 `/plugin` 메뉴에서 끄거나 지울 수 있다.
+
+업데이트:
+
+```
+/plugin marketplace update skills
+```
+
+새 세션에서 확인한다. 자연어로 요청하면 발동한다 — 예: "이 보고서 AI 티 좀 없애줘",
+"임원 보고용으로 다듬어줘", "이 메모 정리해서 이사회 문서로 만들어줘".
+
+### 직접 설치 (스킬을 고쳐 가며 쓸 때)
+
+심볼릭 링크로 걸면 저장소에서 고친 내용이 바로 반영된다.
 
 ```bash
 git clone https://github.com/aron0628/skills.git ~/dev/skills
 ln -s ~/dev/skills/skills/humanizer ~/.claude/skills/humanizer
 ```
-
-새 세션에서 확인한다. 자연어로 요청하면 발동한다 — 예: "이 보고서 AI 티 좀 없애줘",
-"임원 보고용으로 다듬어줘", "이 메모 정리해서 이사회 문서로 만들어줘".
 
 제거는 링크만 지우면 된다.
 
@@ -30,6 +48,9 @@ rm ~/.claude/skills/humanizer
 ## 구조
 
 ```
+.claude-plugin/
+└── marketplace.json    ← 어떤 스킬을 어떤 플러그인으로 내놓을지 선언
+
 skills/                 ← Claude Code 가 읽는 스킬 본체. 이 아래만 링크한다
 └── humanizer/
     ├── SKILL.md            진입점 (frontmatter 의 description 이 발동 조건)
@@ -44,6 +65,31 @@ dev/                    ← 스킬 개발·검증 자료. 설치에는 불필요
     ├── grade.py            산출물 기계 채점
     ├── make_benchmark.py   채점 결과 집계
     └── iteration-1/        1차 검증 결과 (스킬 적용 대 대조군)
+```
+
+## 새 스킬 추가
+
+1. `skills/<이름>/SKILL.md` 를 만든다
+2. `.claude-plugin/marketplace.json` 의 `plugins` 배열에 항목을 추가한다
+
+```json
+{
+  "name": "<이름>",
+  "description": "언제 이 스킬을 쓰는지. 설치 목록에 이 문장이 보인다",
+  "source": "./",
+  "strict": false,
+  "skills": ["./skills/<이름>"]
+}
+```
+
+**2번을 빼먹으면 폴더가 있어도 `/plugin install` 목록에 뜨지 않는다.** 스킬을 하나씩
+골라 받게 하는 대가다. 전부 한 덩어리로 내놓을 거라면 항목 하나에 `skills` 배열을
+여러 개 담거나 배열 자체를 빼면 되지만, 그러면 받는 쪽이 고를 수 없다.
+
+추가 후 검증한다.
+
+```bash
+claude plugin validate .
 ```
 
 ## 개발
