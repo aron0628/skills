@@ -83,6 +83,55 @@ python3 grade.py /tmp/dt     # 6 fail 이 나와야 정상
 
 MIT. [`LICENSE`](LICENSE) 참고.
 
-`humanizer` 의 한국어 패턴 자료는 MIT 라이선스인 외부 프로젝트
-[Humanize KR](https://github.com/epoko77-ai/im-not-ai)의 분류 체계를 참조했다.
-출처와 원본 라이선스 고지는 [`NOTICE.md`](NOTICE.md) 에 있다.
+### 제3자 저작물
+
+`skills/humanizer/references/ai-tells-korean.md` 의 한국어 AI 티 자료는 아래 프로젝트에서
+가져왔다. 코드는 가져오지 않았다 — `scan.py` 는 새로 작성했다.
+
+> **Humanize KR** · https://github.com/epoko77-ai/im-not-ai
+> Copyright (c) 2026 epoko77-ai · MIT License
+
+가져온 범위는 패턴 분류 체계, 실측 분리도(연결어미 뒤 쉼표 4.84배 · 부정 대구 9.2배 ·
+사람 글 532편 중 31편 출현 등), 과윤문 가드(변경률 30%/50%)와 역주입 금지·전멸 금지
+원칙, 그리고 일부 예문이다. 이 수치들의 원출처는 다시 KatFish(Park et al., 인간 470편
+대 LLM 1,624편), Toral(2019) post-editese, 한국 번역학계 번역투 연구(이영옥 2001 ·
+김정우 2007 · 김도훈 2009 · 김혜영 2019 등)다.
+
+MIT 조건에 따라 위 저작권 고지를 유지한다. 이 저장소를 재배포하는 쪽도 같다.
+
+<details>
+<summary>원본 MIT 라이선스 전문</summary>
+
+```
+MIT License
+
+Copyright (c) 2026 epoko77-ai
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+</details>
+
+### 참고 문헌 (직접 인용 아님)
+
+`skills/humanizer/references/mckinsey-voice.md` 의 피라미드 구조·SCQA·MECE 는
+Barbara Minto, *The Minto Pyramid Principle* (1987 / 1996 / 2009) 의 공개된 개념을
+정리한 것으로 원문을 인용하지 않았다. em dash 밀도 수치는 E. M. Freeburg (2026)
+preprint — 12개 instruction-tuned 모델 약 240,000단어 대 인간 기준선 57,232단어 —
+에서 인용했다.
