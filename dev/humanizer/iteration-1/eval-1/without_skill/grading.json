@@ -1,0 +1,54 @@
+{
+  "expectations": [
+    {
+      "text": "em dash가 문단당 1개 이하로 줄었다 (원문 10개)",
+      "passed": true,
+      "evidence": "10 → 0개 / 12문단"
+    },
+    {
+      "text": "AI 어휘 총계가 70% 이상 줄었다 (원문 23회)",
+      "passed": true,
+      "evidence": "23 → 1 (96% 감소); 잔존: ['leverage']"
+    },
+    {
+      "text": "부정 병렬이 1개 이하로 줄었다 (원문 2개)",
+      "passed": true,
+      "evidence": "2 → 0"
+    },
+    {
+      "text": "'In conclusion'이 제거됐다",
+      "passed": true,
+      "evidence": "없음"
+    },
+    {
+      "text": "'It's important to note'가 제거됐다",
+      "passed": true,
+      "evidence": "없음"
+    },
+    {
+      "text": "헤지가 절반 이하로 줄었다 (원문 8개)",
+      "passed": true,
+      "evidence": "8 → 0"
+    },
+    {
+      "text": "원문에 없던 수치를 만들어 넣지 않았다 (위조 방지)",
+      "passed": true,
+      "evidence": "새 수치 없음"
+    },
+    {
+      "text": "역주입이 없다: 윤문 후 늘어난 AI 티 항목이 없다",
+      "passed": false,
+      "evidence": "tells.english.lexicon_hits.leverage: 0→1"
+    },
+    {
+      "text": "결론이 문서 앞 30% 안에 나온다 (Answer first)",
+      "passed": false,
+      "evidence": "첫 권고 신호 위치 0.95"
+    }
+  ],
+  "summary": {
+    "passed": 7,
+    "failed": 2,
+    "manual": 0
+  }
+}

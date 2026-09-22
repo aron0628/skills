@@ -1,0 +1,82 @@
+[
+  {
+    "query": "어제 gpt로 초안 뽑은 하반기 조직개편 보고서인데 (~/Desktop/조직개편_초안_v3.md) 팀장님이 \"이거 딱 봐도 ai가 쓴 거네\" 라고 하셔서 다시 써야 함. 내용은 그대로 두고 사람이 쓴 것처럼 바꿔줘",
+    "should_trigger": true
+  },
+  {
+    "query": "이 메모 다음주 화요일 임원회의에 올라가는 건데 좀 전문적으로 읽히게 다듬어줘. 지금은 뭔가 학생 리포트 같아",
+    "should_trigger": true
+  },
+  {
+    "query": "블로그 초안에 em dash가 열두 개나 있는데 이거 좀 정리해줄래? 다른 것도 어색한 데 있으면 같이 봐줘",
+    "should_trigger": true
+  },
+  {
+    "query": "Here's the Q3 retention memo I drafted (docs/retention-q3.md). Our VP said it reads like it came straight out of ChatGPT. Can you make it sound like an actual person wrote it? Don't change the numbers.",
+    "should_trigger": true
+  },
+  {
+    "query": "고객 인터뷰 8건 노트랑 이탈률 수치 정리한 게 notes/churn-raw.txt 에 있어. 이걸 이사회 보고 문서로 만들어줘. 11월에 보고해야 해",
+    "should_trigger": true
+  },
+  {
+    "query": "이 제안서 한번 검토해줄래? RFP 마감이 금요일인데 뭔가 읽으면서 힘이 안 실린다는 느낌이야. 파일은 proposal/final_draft.docx 내용 복사해서 붙일게",
+    "should_trigger": true
+  },
+  {
+    "query": "발표 스크립트인데 읽어보면 계속 \"단순한 기술이 아니라 문화입니다\" 같은 말투가 반복돼. 3분짜리로 줄이면서 이런 거 좀 빼줘",
+    "should_trigger": true
+  },
+  {
+    "query": "사내 공지문에 이모지랑 체크마크가 잔뜩 박혀 있는데 다 빼고 격식 맞춰서 다시 써줘. 전사 메일로 나가는 거야",
+    "should_trigger": true
+  },
+  {
+    "query": "claude로 쓴 기술 블로그 글인데 \"delve\", \"landscape\", \"seamless\" 이런 단어가 계속 나와서 티가 남. 좀 사람같이 고쳐줘",
+    "should_trigger": true
+  },
+  {
+    "query": "이 투자 검토 메모 결론이 맨 뒤에 있는데 앞으로 빼고 컨설팅 회사에서 쓰는 방식으로 구조 좀 잡아줘",
+    "should_trigger": true
+  },
+  {
+    "query": "이 원고에 오타랑 띄어쓰기 틀린 데만 찾아서 고쳐줘. 문장은 절대 건드리지 마. 저자가 문체에 예민해서 한 글자라도 바뀌면 큰일남",
+    "should_trigger": false
+  },
+  {
+    "query": "이 영문 계약서 조항 3개를 한국어로 번역해줘. 법무팀 검토용이라 의역 말고 최대한 직역으로",
+    "should_trigger": false
+  },
+  {
+    "query": "src/ 아래 마크다운 파일 전체에서 em dash를 일반 하이픈으로 일괄 치환해줘. 빌드에서 인코딩 에러가 나서 그래",
+    "should_trigger": false
+  },
+  {
+    "query": "2시간짜리 회의 녹취록인데 (meetings/2026-09-18.txt) 결정사항이랑 액션아이템만 뽑아서 불릿으로 정리해줘",
+    "should_trigger": false
+  },
+  {
+    "query": "이 소개글이 너무 짧아서 900자는 채워야 하는데 지금 400자야. 내용 더 살 붙여서 늘려줄 수 있어?",
+    "should_trigger": false
+  },
+  {
+    "query": "이 논문 초록 영어 문법만 봐줘. 원어민이 보기에 틀린 관사나 전치사 있으면 알려줘. 스타일은 저널 규정이 있어서 못 바꿔",
+    "should_trigger": false
+  },
+  {
+    "query": "GPTZero나 카피킬러 같은 ai 탐지 도구들 정확도가 실제로 어느 정도야? 학교에서 도입한다는데 오탐 문제 없나",
+    "should_trigger": false
+  },
+  {
+    "query": "우리 제품 소개 페이지 문구를 좀 더 편하고 친근한 말투로 바꿔줘. 20대 타겟이라 지금은 너무 딱딱해",
+    "should_trigger": false
+  },
+  {
+    "query": "이 기사에 나온 통계 수치들 출처가 진짜인지 확인해줄래? 인용된 보고서 실제로 있는지도 같이",
+    "should_trigger": false
+  },
+  {
+    "query": "docs/api-guide.md 를 사내 위키에 올려야 하는데 마크다운을 confluence 형식으로 변환해줘. 표가 많아서 깨질까 걱정이야",
+    "should_trigger": false
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "skill_name": "humanizer",
+  "evals": [
+    {
+      "id": 0,
+      "name": "ko-report-rewrite",
+      "prompt": "이 보고서 AI 티 좀 없애줘. 임원 보고용이라 전문적으로 읽혀야 해.",
+      "expected_output": "중간점·이모지·화살표·문장끝콜론·헤딩콜론이 정리되고, 부정대구('단순한 A가 아니라 B')와 결산상투구('결론적으로')가 걷히고, 결론이 맨 앞으로 오고, 헤딩이 주제에서 주장으로 바뀐 한국어 보고서. 원문에 없는 수치를 만들지 않아야 한다.",
+      "files": ["fixtures/ko-report.md"]
+    },
+    {
+      "id": 1,
+      "name": "en-memo-rewrite",
+      "prompt": "Rewrite this memo so it doesn't read like ChatGPT wrote it. It's going to our exec team.",
+      "expected_output": "em dash 10개가 문단당 1개 이하로, delve/showcase/multifaceted/holistic/ever-evolving 등 AI 어휘가 대체되고, 'not just X, it's Y' 부정병렬과 'It's important to note'·'In conclusion'이 제거되고, 헤지 중첩이 걷히고, 결론이 앞으로 온 영문 메모. 원문에 없는 숫자를 만들지 않아야 한다.",
+      "files": ["fixtures/en-memo.md"]
+    },
+    {
+      "id": 2,
+      "name": "raw-notes-to-memo",
+      "prompt": "이 메모 정리해서 이사회 보고용 문서로 만들어줘. 11월에 잔존율 개선 계획 보고해야 해.",
+      "expected_output": "결론(30일 이탈이 갈림길, 온보딩 우선)이 맨 앞에 오고, 흩어진 수치가 근거로 배치되고, CS 증원 주장을 데이터로 반박하고(이탈 계정 중 티켓 생성 9%), 확인되지 않은 것(가격 원인 미조사, 경쟁사 무료티어 영향)을 '모른다'로 명시하고, 누가 언제 무엇을 얼마로 하는지가 있는 문서. 자료에 없는 숫자를 만들지 않아야 한다.",
+      "files": ["fixtures/raw-notes.md"]
+    }
+  ]
+}

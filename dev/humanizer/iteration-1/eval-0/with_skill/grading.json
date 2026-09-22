@@ -1,0 +1,54 @@
+{
+  "expectations": [
+    {
+      "text": "이모지와 체크마크가 전부 제거됐다 (원문 3개)",
+      "passed": true,
+      "evidence": "결과물 이모지 0 + 체크 0 = 0"
+    },
+    {
+      "text": "화살표 →가 전부 제거됐다 (원문 3개)",
+      "passed": true,
+      "evidence": "결과물 화살표 0개"
+    },
+    {
+      "text": "헤딩의 콜론 부제가 전부 제거됐다 (원문 4개)",
+      "passed": true,
+      "evidence": "결과물 헤딩 콜론 0개"
+    },
+    {
+      "text": "열거 예고 콜론('다음과 같습니다:')이 제거됐다",
+      "passed": true,
+      "evidence": "결과물 열거예고 0개 / 문장끝 콜론 0개"
+    },
+    {
+      "text": "부정 대구가 줄었다 (원문 3개 → 2개 이하)",
+      "passed": true,
+      "evidence": "3 → 1"
+    },
+    {
+      "text": "결산 상투구가 1개 이하로 줄었다 (원문 2개)",
+      "passed": true,
+      "evidence": "2 → 0"
+    },
+    {
+      "text": "원문에 없던 수치를 만들어 넣지 않았다 (위조 방지)",
+      "passed": true,
+      "evidence": "새 수치 없음"
+    },
+    {
+      "text": "역주입이 없다: 윤문 후 늘어난 AI 티 항목이 없다",
+      "passed": true,
+      "evidence": "없음"
+    },
+    {
+      "text": "결론이 문서 앞 30% 안에 나온다 (Answer first)",
+      "passed": null,
+      "evidence": "사람 판정 필요 — 첫 문단: 클라우드 마이그레이션으로 인프라를 현대화했고 데이터 분석으로 의사결정의 질도 개선했습니다. 디지털 역량 자체는 이미 확보했습니다."
+    }
+  ],
+  "summary": {
+    "passed": 8,
+    "failed": 0,
+    "manual": 1
+  }
+}

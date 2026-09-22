@@ -1,0 +1,16 @@
+{
+  "eval_id": 1,
+  "eval_name": "en-memo-rewrite",
+  "prompt": "Rewrite this memo so it doesn't read like ChatGPT wrote it. It's going to our exec team.  [input: fixtures/en-memo.md — 10 em dashes, 23 AI-lexicon hits, 2 negative parallels, 8 hedges, 1 numeric claim]",
+  "assertions": [
+    { "id": "B1", "text": "em dash가 문단당 1개 이하로 줄었다 (원문 10개)" },
+    { "id": "B2", "text": "AI 어휘 총계가 70% 이상 줄었다 (원문 23회: delve, showcase, multifaceted, holistic, ever-evolving 등)" },
+    { "id": "B3", "text": "부정 병렬('not just X, it's Y')이 1개 이하로 줄었다 (원문 2개)" },
+    { "id": "B4", "text": "'In conclusion'이 제거됐다" },
+    { "id": "B5", "text": "'It's important to note'가 제거됐다" },
+    { "id": "B6", "text": "헤지가 절반 이하로 줄었다 (원문 8개)" },
+    { "id": "B7", "text": "원문에 없던 수치를 만들어 넣지 않았다 (위조 방지 — 가장 중요)" },
+    { "id": "B8", "text": "역주입이 없다: 윤문 후 늘어난 AI 티 항목이 없다" },
+    { "id": "B9", "text": "결론이 문서 앞 30% 안에 나온다 (Answer first)" }
+  ]
+}
